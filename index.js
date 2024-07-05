@@ -36,6 +36,7 @@ app.post("/referral", async (req, res) => {
   }
 
   const referedUser = new ReferralModel({ email, name, course });
+  await referedUser.save();
 
   try {
     await transporter.sendMail({
