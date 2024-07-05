@@ -67,7 +67,9 @@ app.post("/referral", async (req, res) => {
 });
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(
+    "mongodb+srv://sathish:Swathi%40123@cluster0.fygopsn.mongodb.net/referral?retryWrites=true&w=majority&appName=Cluster0"
+  )
   .then(() => {
     console.log("Connected To MongoDB");
   })
